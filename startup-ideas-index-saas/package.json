@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postinstall": "prisma generate",
+    "packageManager": "npm@10",
+    "postinstall": "prisma generate --schema=prisma/schema.prisma",
+    "vercel-build": "prisma migrate deploy --schema=prisma/schema.prisma && next build",
     "db:migrate": "prisma migrate dev --name init",
     "db:seed": "tsx prisma/seed.ts"
   },
@@ -19,7 +21,7 @@
   },
   "devDependencies": {
     "typescript": "5.6.2",
-    "eslint": "^8.57.0",
+    "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "tailwindcss": "3.4.10",
     "postcss": "8.4.47",
@@ -28,4 +30,5 @@
     "tsx": "4.19.1"
   }
 }
+
 
