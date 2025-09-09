@@ -8,11 +8,9 @@
 "start": "next start",
 
 
-// Vercel calls this (we route Prisma + Next build here)
 "vercel-build": "prisma migrate deploy --schema=prisma/schema.prisma && next build",
 
 
-// optional helpers for you (not called by Vercel)
 "db:push": "prisma db push --schema=prisma/schema.prisma",
 "db:migrate": "prisma migrate deploy --schema=prisma/schema.prisma",
 "db:seed": "tsx prisma/seed.ts"
@@ -34,4 +32,5 @@
 "prisma": "5.19.1",
 "tsx": "4.19.1"
 }
-}
+
+
