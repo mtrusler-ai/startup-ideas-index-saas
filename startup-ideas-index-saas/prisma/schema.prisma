@@ -1,5 +1,11 @@
-generator client { provider = "prisma-client-js" }
-datasource db { provider = "postgresql"; url = env("DATABASE_URL") }
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
 model User {
   id        String   @id @default(cuid())
@@ -9,18 +15,18 @@ model User {
 }
 
 model Idea {
-  id           String   @id @default(cuid())
-  title        String   @unique
-  summary      String
-  problem      String
-  solution     String
-  marketSize   String
-  targetUsers  String
-  industry     String
-  timing       String
-  tags         String[]
-  upvotes      Int      @default(0)
-  bookmarks    Int      @default(0)
-  createdAt    DateTime @default(now())
-  risks        String
+  id          String   @id @default(cuid())
+  title       String   @unique
+  summary     String
+  problem     String
+  solution    String
+  marketSize  String
+  targetUsers String
+  industry    String
+  timing      String
+  tags        String[]
+  upvotes     Int      @default(0)
+  bookmarks   Int      @default(0)
+  createdAt   DateTime @default(now())
+  risks       String
 }
