@@ -4,13 +4,15 @@
   "version": "0.2.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "packageManager": "npm@10",
-    "postinstall": "prisma generate --schema=prisma/schema.prisma",
-    "vercel-build": "prisma migrate deploy --schema=prisma/schema.prisma && next build",
-    "db:migrate": "prisma migrate dev --name init",
-    "db:seed": "tsx prisma/seed.ts"
+  "build": "next build",
+  "start": "next start",
+
+  "postinstall": "prisma generate --schema=prisma/schema.prisma",
+
+  "db:push": "prisma db push --schema=prisma/schema.prisma",
+  "db:migrate": "prisma migrate deploy --schema=prisma/schema.prisma",
+
+  "db:seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -30,5 +32,6 @@
     "tsx": "4.19.1"
   }
 }
+
 
 
