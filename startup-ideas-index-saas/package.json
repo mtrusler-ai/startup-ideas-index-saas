@@ -6,11 +6,8 @@
 "dev": "next dev",
 "build": "next build",
 "start": "next start",
-
-
+"postinstall": "prisma generate --schema=prisma/schema.prisma",
 "vercel-build": "prisma migrate deploy --schema=prisma/schema.prisma && next build",
-
-
 "db:push": "prisma db push --schema=prisma/schema.prisma",
 "db:migrate": "prisma migrate deploy --schema=prisma/schema.prisma",
 "db:seed": "tsx prisma/seed.ts"
@@ -31,6 +28,7 @@
 "autoprefixer": "10.4.20",
 "prisma": "5.19.1",
 "tsx": "4.19.1"
+}
 }
 
 
