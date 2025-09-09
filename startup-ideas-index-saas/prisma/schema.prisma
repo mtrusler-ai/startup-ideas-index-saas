@@ -30,5 +30,3 @@ model Idea {
   createdAt   DateTime @default(now())
   risks       String
 }
-
-
